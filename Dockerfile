@@ -5,6 +5,7 @@ RUN mkdir -p /var/lock \
   && opkg update \
   && opkg install \
     luci \
+    luci-i18n-base-en \
     # luci-theme-openwrt \
   && rm /var/opkg-lists/* \
   && /etc/init.d/dropbear enable
