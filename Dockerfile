@@ -1,11 +1,11 @@
-FROM katta/openwrt-rootfs:latest
+FROM katta/openwrt-rootfs:19.07.3
 
 RUN mkdir -p /var/lock \
   && mkdir -p /var/run \
   && opkg update \
   && opkg install \
     luci \
-    luci-theme-openwrt \
+    # luci-theme-openwrt \
   && rm /var/opkg-lists/* \
   && /etc/init.d/dropbear enable
 
